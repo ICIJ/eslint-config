@@ -1,0 +1,24 @@
+{
+  "name": "eslint-config-icij",
+  "version": "1.0.0",
+  "description": "ESLint and Prettier config for ICIJ projects",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ICIJ/eslint-config-icij.git"
+  },
+  "keywords": [
+    "vue.js",
+    "typescript",
+    "eslint",
+    "lint",
+    "prettier"
+  ],
+  "author": "ICIJ",
+  "license": "MIT",
+  "homepage": "https://github.com/ICIJ/eslint-config-icij#readme"
+}
