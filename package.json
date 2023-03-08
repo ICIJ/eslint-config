@@ -5,20 +5,29 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "yarn lint --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/ICIJ/eslint-config-icij.git"
-  },
+  "repository": "git@github.com:ICIJ/eslint-config-icij.git",
   "keywords": [
     "vue.js",
-    "typescript",
     "eslint",
+    "eslintconfig",
     "lint",
     "prettier"
   ],
   "author": "ICIJ",
   "license": "MIT",
-  "homepage": "https://github.com/ICIJ/eslint-config-icij#readme"
+  "homepage": "https://github.com/ICIJ/eslint-config-icij#readme",
+  "dependencies": {
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.35.0",
+    "prettier": "^2.8.4"
+  },
+  "devDependencies": {
+    "eslint-plugin-import": "^2.27.5"
+  }
 }
