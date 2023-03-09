@@ -18,16 +18,15 @@
   "author": "ICIJ",
   "license": "MIT",
   "homepage": "https://github.com/ICIJ/eslint-config-icij#readme",
-  "dependencies": {
-    "eslint-config-prettier": "^8.7.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.9.0"
-  },
   "peerDependencies": {
     "eslint": "^8.35.0",
     "prettier": "^2.8.4"
   },
   "devDependencies": {
-    "eslint-plugin-import": "^2.27.5"
+    "babel-eslint": "^10.1.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0"
   }
 }
