@@ -1,6 +1,9 @@
+// Patch to allow plugins to be loaded as dependencies in shareable config
+require('@rushstack/eslint-patch/modern-module-resolution')
+
 module.exports = {
     env: {
-        "jest/globals": true,
+        jest: true,
         browser: true,
         es2021: true
     },
@@ -12,7 +15,7 @@ module.exports = {
     ],
     overrides: [],
     parserOptions: {
-        parser: 'babel-eslint'
+        parser: "@babel/eslint-parser"
     },
     plugins: [
         "prettier",
