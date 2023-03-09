@@ -2,11 +2,11 @@ This is a configuration for linting and formatting all ICIJ Vue.js projects unif
 
 # How to use
 
-1. Clean up your project (optional)
+## 1. Clean up your project (optional)
 
 If the project already has an eslint/prettier configuration, delete all ESlint and Prettier related files and packages. 
 
-2. Install the package
+## 2. Install the package
 
 To install the config, run:
 ```
@@ -27,7 +27,7 @@ Alternatively, you can add in an `.eslintrc` file:
 }
 ```
 
-3. Run the package
+## 3. Run the package
 You can add scripts in the projects `package.json` to lint and fix:
 ```
 "scripts": {
@@ -39,6 +39,7 @@ You can add scripts in the projects `package.json` to lint and fix:
 # Overriding rules
 If a project needs to overwrite eslint or prettier rules, add the rules in an `.eslintrc` file. 
 
+```
 {
   "extends": [
     "icij"
@@ -47,3 +48,4 @@ If a project needs to overwrite eslint or prettier rules, add the rules in an `.
     "no-console": 2,
   }
 }
+```
