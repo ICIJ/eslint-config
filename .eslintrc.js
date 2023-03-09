@@ -29,13 +29,31 @@ module.exports = {
         printWidth: 120
       }
     ],
+    'import/extensions': [
+      'warn',
+      'never',
+      {
+        conf: 'always',
+        json: 'always'
+      }
+    ],
+    'import/order': [
+      'error',
+      {
+        groups: [
+          ['builtin', 'external'],
+          ['internal', 'parent', 'sibling', 'index']
+        ],
+        'newlines-between': 'always'
+      }
+    ],
     'import/no-webpack-loader-syntax': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'no-useless-escape': 'off',
     'lines-between-class-members': 'off',
     'template-curly-spacing': 'off',
     'vue/custom-event-name-casing': 'off',
     'vue/multi-word-component-names': 'off',
-    'import/no-extraneous-dependencies': 'off',
     'vue/require-default-prop': 'off',
     'vue/no-v-html': 'off'
   }
