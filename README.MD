@@ -45,7 +45,7 @@ If a project needs to overwrite eslint or prettier rules, add the rules in an `.
     "icij"
   ],
   "rules": {
-    "no-console": 2,
+    "no-console": "error",
   }
 }
 ```
