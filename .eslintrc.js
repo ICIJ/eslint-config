@@ -34,7 +34,8 @@ module.exports = {
       'never',
       {
         conf: 'always',
-        json: 'always'
+        json: 'always',
+        scss: 'always'
       }
     ],
     'import/order': [
