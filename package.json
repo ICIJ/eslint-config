@@ -1,6 +1,6 @@
 {
   "name": "@icij/eslint-config-icij",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "ESLint and Prettier config for ICIJ projects",
   "main": "index.js",
   "scripts": {
