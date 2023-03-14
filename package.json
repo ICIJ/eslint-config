@@ -27,7 +27,7 @@
       "./.eslintrc.js"
     ]
   },
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.21.0",
     "@babel/eslint-parser": "^7.19.1",
     "@rushstack/eslint-patch": "^1.2.0",
