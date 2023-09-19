@@ -10,24 +10,25 @@ If the project already has an eslint/prettier configuration, delete all ESlint a
 
 To install the config, run:
 ```
-yarn add -D eslint-config-icij
+yarn add -D @icij/eslint-config
 ```
 
 In the projects `package.json` file, add: 
 ```
 "eslintConfig": {
-  "extends": ["icij"]
+  "extends": ["@icij/eslint-config"]
 }
 ```
 
-Alternatively, you can add in an `.eslintrc` file:
+Alternatively, you can add if you use an `.eslintrc` file:
 ```
 {
-  "extends": ["icij"]
+  "extends": ["@icij/eslint-config"]
 }
 ```
 
 ## 3. Run the package
+
 You can add scripts in the projects `package.json` to lint and fix:
 ```
 "scripts": {
@@ -37,12 +38,13 @@ You can add scripts in the projects `package.json` to lint and fix:
 ```
 
 # Overriding rules
+
 If a project needs to overwrite eslint or prettier rules, add the rules in an `.eslintrc` file. 
 
 ```
 {
   "extends": [
-    "icij"
+    "@icij/eslint-config"
   ],
   "rules": {
     "no-console": "error",

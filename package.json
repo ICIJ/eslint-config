@@ -1,5 +1,5 @@
 {
-  "name": "@icij/eslint-config-icij",
+  "name": "@icij/eslint-config",
   "version": "1.0.2",
   "description": "ESLint and Prettier config for ICIJ projects",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix"
   },
-  "repository": "git@github.com:ICIJ/eslint-config-icij.git",
+  "repository": "git@github.com:ICIJ/eslint-config.git",
   "keywords": [
     "vue.js",
     "eslint",
@@ -17,7 +17,7 @@
   ],
   "author": "ICIJ",
   "license": "MIT",
-  "homepage": "https://github.com/ICIJ/eslint-config-icij#readme",
+  "homepage": "https://github.com/ICIJ/eslint-config#readme",
   "peerDependencies": {
     "eslint": "^8.35.0",
     "prettier": "^2.8.4"
