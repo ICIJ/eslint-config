@@ -1,3 +1,2 @@
-const eslintrc = require('./.eslintrc')
-
-module.exports = eslintrc
+// eslint-disable-next-line import/extensions
+export * as default from './eslint.config.js'
