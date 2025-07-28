@@ -19,7 +19,7 @@ export default [
 
   {
     rules: {
-      '@stylistic/comma-dangle': 'off', 
+      '@stylistic/comma-dangle': 'off',
       '@stylistic/indent': ['error', 2],
       '@stylistic/object-curly-spacing': ['error', 'always'],
       '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
