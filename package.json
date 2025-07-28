@@ -19,7 +19,6 @@
   "author": "ICIJ",
   "license": "MIT",
   "homepage": "https://github.com/ICIJ/eslint-config#readme",
-  "type": "module",
   "peerDependencies": {
     "eslint": "^9.30.1"
   },
