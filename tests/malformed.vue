@@ -22,6 +22,7 @@ defineEmits(def)
   <button
     type="button"
     @click="notify"
+    @click="notify"
     v-html="message"
   />
 </template>
