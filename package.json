@@ -1,6 +1,6 @@
 {
   "name": "@icij/eslint-config",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": false,
   "description": "ESLint config for ICIJ projects, including Typescript, Stylistic and Vue support",
   "type": "module",
