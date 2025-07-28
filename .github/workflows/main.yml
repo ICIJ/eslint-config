@@ -22,8 +22,6 @@ jobs:
 
       - name: Check eslint works
         run: |
-          set +e
-
           OUTPUT=$(yarn eslint ./tests --color 2>&1)
 
           EXPECTED="10 problems (9 errors, 1 warning)"
