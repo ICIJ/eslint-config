@@ -4,7 +4,7 @@ This is a configuration for linting and formatting all ICIJ Vue.js projects unif
 
 ## 1. Clean up your project (optional)
 
-If the project already has an eslint/prettier configuration, delete all ESlint and Prettier related files and packages. 
+If the project already has an eslint configuration, delete all ESlint and Prettier related files and packages. 
 
 ## 2. Install the package
 

@@ -1,72 +1,46 @@
-import standard from 'eslint-config-standard'
-import prettier from 'eslint-config-prettier'
-import vue from 'eslint-plugin-vue'
-import prettierPlugin from 'eslint-plugin-prettier'
+// @ts-check
+import eslint from '@eslint/js'
+import tseslint from 'typescript-eslint'
+import tsParser from '@typescript-eslint/parser'
+import stylistic from '@stylistic/eslint-plugin'
+import vuePlugin from 'eslint-plugin-vue'
+import vueParser from 'vue-eslint-parser'
 import importPlugin from 'eslint-plugin-import'
-import nPlugin from 'eslint-plugin-n'
 import promisePlugin from 'eslint-plugin-promise'
-import babelParser from '@babel/eslint-parser'
 
-const icij = [
+export default [
+  eslint.configs.recommended,
+  stylistic.configs.recommended,
+  importPlugin.flatConfigs.recommended,
+  promisePlugin.configs['flat/recommended'],
+  ...tseslint.configs.recommended,
+  ...tseslint.configs.stylistic,
+  ...vuePlugin.configs['flat/recommended'],
+
   {
-    files: ['**/*.{js,jsx,ts,tsx,vue}'],
+    rules: {
+      '@stylistic/comma-dangle': 'off', 
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/object-curly-spacing': ['error', 'always'],
+      '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
+      '@stylistic/semi': ['error', 'never'],
+      '@typescript-eslint/no-unused-vars': 'error',
+      'vue/custom-event-name-casing': 'off',
+      'vue/multi-word-component-names': 'off',
+      'vue/require-default-prop': 'off'
+    }
+  },
+
+  {
+    files: ['**/*.vue'],
     languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      parser: babelParser,
+      parser: vueParser,
       parserOptions: {
-        requireConfigFile: false
+        parser: tsParser
       }
     },
     plugins: {
-      import: importPlugin,
-      n: nPlugin,
-      promise: promisePlugin,
-      vue,
-      prettier: prettierPlugin
-    },
-    rules: {
-      ...standard.rules,
-      ...vue.rules.recommended,
-      ...prettier.rules,
-      'prettier/prettier': [
-        'error',
-        {
-          singleQuote: true,
-          semi: false,
-          trailingComma: 'none',
-          printWidth: 120
-        }
-      ],
-      'import/extensions': [
-        'warn',
-        'never',
-        {
-          conf: 'always',
-          json: 'always',
-          scss: 'always'
-        }
-      ],
-      'import/order': [
-        'warn',
-        {
-          groups: [
-            ['builtin', 'external'],
-            ['internal', 'parent', 'sibling', 'index']
-          ],
-          'newlines-between': 'always'
-        }
-      ],
-      'import/no-webpack-loader-syntax': 'off',
-      'import/no-extraneous-dependencies': 'off',
-      'no-useless-escape': 'off',
-      'lines-between-class-members': 'off',
-      'template-curly-spacing': 'off',
-      'vue/custom-event-name-casing': 'off',
-      'vue/multi-word-component-names': 'off',
-      'vue/require-default-prop': 'off',
-      'vue/no-v-html': 'off'
+      vue: vuePlugin
     }
   }
 ]
-export default icij
