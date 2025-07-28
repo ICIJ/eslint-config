@@ -1,0 +1,38 @@
+name: Test eslint is executed correctly
+
+on:
+  push:
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'yarn'
+
+      - name: Install Node dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Check eslint works
+        run: |
+          set +e
+
+          OUTPUT=$(yarn eslint ./tests --color 2>&1)
+
+          EXPECTED="10 problems (9 errors, 1 warning)"
+          echo "$OUTPUT" | grep -F "$EXPECTED" > /dev/null
+
+          if [ $? -ne 0 ]; then
+            echo "❌ ESLint did not print expected summary:\n
+            printf "%b\n" "$OUTPUT"
+            exit 1
+          fi
+
+          echo "✅ ESLint exited with errors and printed expected summary."
