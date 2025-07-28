@@ -21,16 +21,4 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Check eslint works
-        run: |
-          OUTPUT=$(yarn eslint ./tests --color 2>&1)
-
-          EXPECTED="10 problems (9 errors, 1 warning)"
-          echo "$OUTPUT" | grep -F "$EXPECTED" > /dev/null
-
-          if [ $? -ne 0 ]; then
-            echo "❌ ESLint did not print expected summary:\n
-            printf "%b\n" "$OUTPUT"
-            exit 1
-          fi
-
-          echo "✅ ESLint exited with errors and printed expected summary."
+        run: yarn test
