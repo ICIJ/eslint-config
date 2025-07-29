@@ -6,7 +6,7 @@ export default [
   {
     files: [
       "**/*.spec.js",
-      "tests/unit/*/**.js"
+      "tests/unit/**/*.js"
     ],
     languageOptions: {
       globals: {
