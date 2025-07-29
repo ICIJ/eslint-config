@@ -5,13 +5,19 @@ import tsParser from '@typescript-eslint/parser'
 import stylistic from '@stylistic/eslint-plugin'
 import vuePlugin from 'eslint-plugin-vue'
 import vueParser from 'vue-eslint-parser'
-import importPlugin from 'eslint-plugin-import'
 import promisePlugin from 'eslint-plugin-promise'
 
-export default [
+export default tseslint.config(
+  {
+    ignores: [
+      'dist',
+      'node_modules',
+      'storybook-static',
+    ]
+  },
+
   eslint.configs.recommended,
   stylistic.configs.recommended,
-  importPlugin.flatConfigs.recommended,
   promisePlugin.configs['flat/recommended'],
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
@@ -19,12 +25,24 @@ export default [
 
   {
     rules: {
+      'no-unused-vars': 'off',
+
       '@stylistic/comma-dangle': 'off',
       '@stylistic/indent': ['error', 2],
       '@stylistic/object-curly-spacing': ['error', 'always'],
-      '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
       '@stylistic/semi': ['error', 'never'],
-      '@typescript-eslint/no-unused-vars': 'error',
+      '@stylistic/object-property-newline': ['error', {
+        allowAllPropertiesOnSameLine: true
+      }],
+
+      '@typescript-eslint/no-empty-function': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', {
+        varsIgnorePattern: '^(Ph[A-Z])|(_)',
+        argsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_'
+      }],
+
       'vue/custom-event-name-casing': 'off',
       'vue/multi-word-component-names': 'off',
       'vue/require-default-prop': 'off'
@@ -43,4 +61,4 @@ export default [
       vue: vuePlugin
     }
   }
-]
+)
