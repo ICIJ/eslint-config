@@ -14,4 +14,4 @@ export const configs = {
   all
 }
 
-export default all
+export default { configs }
