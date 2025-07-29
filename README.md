@@ -50,8 +50,7 @@ export default [
 ```js
 import icijeslint from '@icij/eslint-config'
 
-export default [![ICIJ_LOGO-04](https://github.com/user-attachments/assets/3177c446-a871-478a-bc52-30f4579ef589)
-
+export default [
   ...icijeslint.configs.withTypescript
 ]
 ```
