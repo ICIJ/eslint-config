@@ -56,7 +56,7 @@ You can override rules by extending the base config in your `eslint.config.js`:
 ```js
 import icijeslint from '@icij/eslint-config'
 
-export icijeslint.default [
+export default [
   ...icijeslint.configs.withTypescript,
   {
     rules: {
