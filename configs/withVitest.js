@@ -5,8 +5,8 @@ import vitestGlobals from "eslint-plugin-vitest-globals"
 export default [
   {
     files: [
-      "test/**/*.spec.js",
-      "tests/**/*.spec.js"
+      "**/*.spec.js",
+      "tests/unit/*/**.js"
     ],
     languageOptions: {
       globals: {
