@@ -1,53 +1,72 @@
-This is a configuration for linting and formatting all ICIJ Vue.js projects uniformly. A typescript configuration should ba added later. 
+# @icij/eslint-config
 
-# How to use
+Unified ESLint configuration for ICIJ projects. This package provides modular, opinionated linting presets for JavaScript, TypeScript, Vue.js, and Vitest.
 
-## 1. Clean up your project (optional)
+## 📦 Installation
 
-If the project already has an eslint configuration, delete all ESlint and Prettier related files and packages. 
-
-## 2. Install the package
-
-To install the config, run:
-```
+```bash
 yarn add -D @icij/eslint-config
 ```
 
-In the projects `package.json` file, add: 
-```
-"eslintConfig": {
-  "extends": ["@icij/eslint-config"]
-}
+## 🚀 Usage
+
+Instead of using `extends` in `package.json` or `.eslintrc`, use a flat config (`eslint.config.js`) at the root of your project.
+
+Examples:
+
+### Recommended for JavaScript projects
+
+```js
+import icijeslint from '@icij/eslint-config'
+
+export default [
+  ...icijeslint.configs.recommended
+]
 ```
 
-Alternatively, you can add if you use an `.eslintrc` file:
-```
-{
-  "extends": ["@icij/eslint-config"]
-}
-```
+### Recommended with TypeScript
 
-## 3. Run the package
+```js
+import icijeslint from '@icij/eslint-config'
 
-You can add scripts in the projects `package.json` to lint and fix:
-```
-"scripts": {
-  "lint": "eslint .",
-  "lint:fix": "yarn lint --fix"
-},
+export default [
+  ...icijeslint.configs.withTypescript
+]
 ```
 
-# Overriding rules
+### Recommended with TypeScript + Vue + Vitest
 
-If a project needs to overwrite eslint or prettier rules, add the rules in an `.eslintrc` file. 
+```js
+import icijeslint from '@icij/eslint-config'
 
+export default [
+  ...icijeslint.configs.all
+]
 ```
-{
-  "extends": [
-    "@icij/eslint-config"
-  ],
-  "rules": {
-    "no-console": "error",
+
+## 🛠 Overriding rules
+
+You can override rules by extending the base config in your `eslint.config.js`:
+
+```js
+import icijeslint from '@icij/eslint-config'
+
+export icijeslint.default [
+  ...icijeslint.configs.withTypescript,
+  {
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off'
+    }
   }
-}
+]
 ```
+
+## 📚 Available Configs
+
+| Config name      | Description                                     |
+| ---------------- | ----------------------------------------------- |
+| `recommended`    | Basic ESLint + stylistic + promises             |
+| `withTypescript` | Recommended + TypeScript support                |
+| `withVue`        | Recommended + Vue (with Vue parser) support     |
+| `withVitest`     | Recommended + Vitest support                    |
+| `all`            | Recommended + TypeScript + Vue + Vitest support |
