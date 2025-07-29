@@ -1,8 +1,11 @@
 <div align="center">
+<a href="https://icij.org/">
+  <img src="https://github.com/user-attachments/assets/a06dbaf4-5317-4b2a-832e-e37498780f01" width="140px">
+</a>
+<br>
 <strong>Shared config for ESLint</strong>
 <p>
-Unified ESLint configuration for ICIJ projects. This package provides modular, opinionated 
-linting presets for JavaScript, TypeScript, Vue.js, and Vitest.
+Unified ESLint configuration for ICIJ projects.
 </p>
 </div>
 
@@ -47,7 +50,8 @@ export default [
 ```js
 import icijeslint from '@icij/eslint-config'
 
-export default [
+export default [![ICIJ_LOGO-04](https://github.com/user-attachments/assets/3177c446-a871-478a-bc52-30f4579ef589)
+
   ...icijeslint.configs.withTypescript
 ]
 ```
