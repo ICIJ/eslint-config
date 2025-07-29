@@ -1,6 +1,7 @@
 # @icij/eslint-config
 
-Unified ESLint configuration for ICIJ projects. This package provides modular, opinionated linting presets for JavaScript, TypeScript, Vue.js, and Vitest.
+Unified ESLint configuration for ICIJ projects. This package provides modular, opinionated 
+linting presets for JavaScript, TypeScript, Vue.js, and Vitest.
 
 ## 📦 Installation
 
@@ -10,7 +11,11 @@ yarn add -D @icij/eslint-config
 
 ## 🚀 Usage
 
-Instead of using `extends` in `package.json` or `.eslintrc`, use a flat config (`eslint.config.js`) at the root of your project.
+Instead of using `extends` in `package.json` or `.eslintrc`, use a flat config (`eslint.config.js`) 
+at the root of your project. Flat config for ESLint are the new recommended configuration format 
+introduced in ESLint v8. It uses standard JavaScript modules, offers better performance, and provides 
+more flexibility for conditional and dynamic configuration. To learn more about this format, read 
+the [official ESLint flat config documentation](https://eslint.org/docs/latest/use/configure/configuration-files-new).
 
 Examples:
 
