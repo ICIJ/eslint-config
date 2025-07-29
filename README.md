@@ -1,7 +1,20 @@
-# @icij/eslint-config
-
+<div align="center">
+<strong>Shared config for ESLint</strong>
+<p>
 Unified ESLint configuration for ICIJ projects. This package provides modular, opinionated 
 linting presets for JavaScript, TypeScript, Vue.js, and Vitest.
+</p>
+</div>
+
+<div align="center">
+
+| | Status |
+| --: | :-- |
+| **CI checks** | [![Github Actions](https://img.shields.io/github/actions/workflow/status/icij/eslint-config/main.yml?style=shield)](https://github.com/ICIJ/eslint-config/actions/workflows/main.yml) |
+| **Latest version** | [![Latest version](https://img.shields.io/github/v/tag/icij/eslint-config?style=shield)](https://www.npmjs.com/package/@icij/eslint-config) |
+| **Release date** | [![Release date](https://img.shields.io/npm/last-update/%40icij%2Feslint-config)](https://www.npmjs.com/package/@icij/eslint-config) |
+
+</div>
 
 ## 📦 Installation
 
