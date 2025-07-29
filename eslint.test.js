@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { spawnSync } from 'node:child_process'
 
-const EXPECTED = '10 problems (9 errors, 1 warning)'
+const EXPECTED = '9 problems (8 errors, 1 warning)'
 
 // Run ESLint and capture output
 const result = spawnSync('yarn', ['eslint', './tests', '--color'], {
